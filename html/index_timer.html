@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Test</title>
+
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="test"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let t = new Timer();
+
+            t.start();
+            for (let index = 0; index < 7000000; index++) {
+                document.getElementById("test")
+            }
+            t.stop();
+            console.log(t.getElapsedTimeAsNs());
+            console.log(t.getElapsedTimeAsMs());
+        });
+    </script>
+</body>
+
+</html>
